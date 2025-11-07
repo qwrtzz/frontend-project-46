@@ -1,24 +1,14 @@
-build:
-	poetry build
+install:
+	composer install
 
-publish:
-	poetry publish --dry-run
-
-package-install:
-	python3 -m pip install --user dist/*.whl --force-reinstall
-
-setup: build publish package-install
+validate:
+	composer validate
 
 lint:
-	poetry run flake8 gendiff
-
-install:
-	poetry install
-
-check: check test lint
+	composer run-script phpcs -- --standard=PSR12 src bin tests
 
 test:
-	poetry run pytest -s
+	composer run-script test
 
 test-coverage:
-	poetry run pytest --cov=gendiff --cov-report xml
+	composer run-script test-coverage

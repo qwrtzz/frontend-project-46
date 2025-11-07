@@ -1,49 +1,53 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/MKashtanov/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MKashtanov/python-project-50/actions)
+# Проект «Вычислитель отличий»
 
-[![Python CI](https://github.com/MKashtanov/python-project-50/actions/workflows/main.yml/badge.svg)](https://github.com/MKashtanov/python-project-50/actions/workflows/main.yml)
+[![Actions Status](https://github.com/bysynth/php-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/bysynth/php-project-lvl2/actions)
+[![Github Actions Status](https://github.com/bysynth/php-project-lvl2/workflows/CI/badge.svg)](https://github.com/bysynth/php-project-lvl2/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9f83efce639667fe4221/maintainability)](https://codeclimate.com/github/bysynth/php-project-lvl2/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/9f83efce639667fe4221/test_coverage)](https://codeclimate.com/github/bysynth/php-project-lvl2/test_coverage)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/dd587f9a2e313ca9e306/maintainability)](https://codeclimate.com/github/MKashtanov/python-project-50/maintainability)
+Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Это популярная задача, для решения 
+которой существует множество онлайн-сервисов. Подобный механизм используется при выводе тестов или при автоматическом 
+отслеживании изменении в конфигурационных файлах.
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/dd587f9a2e313ca9e306/test_coverage)](https://codeclimate.com/github/MKashtanov/python-project-50/test_coverage)
+Возможности утилиты:
 
-### Описание:
+* Поддержка разных входных форматов: yaml и json
+* Генерация отчета в виде plain text, stylish и json
 
-Вычислитель отличий. Учебный проект Hexlet.
+## Установка
 
-Программа принимает на вход два файла конфигурации типов JSON или YAML. Возвращает отличия второго от первого, какие тэги были добавлены, какие удалены, какие изменены.
+```bash
+git clone https://github.com/bysynth/php-project-lvl2.git differ
+cd differ
+make install
+```
 
-Результат может быть представлен в различных видах.
+## Инструкция по использованию:
 
-### Установка, тестирование, проверка линтером
+Инструкция по использованию доступна по команде ```./bin/gendiff -h```.
 
-Установка производится вызовом: **make setup** 
+Варианты форматирования результата работы программы:
 
-Запуск тестирования: **make test**
+- ```stylish```
+- ```plain```
+- ```json```
 
-Проверка линтером: **make lint**
+### Сравнение плоских файлов json. Вывод результата в формате stylish
 
-### How to install gendiff:
+[![asciicast](https://asciinema.org/a/CJvOblN803ISLO5dkh8Z4QSXP.svg)](https://asciinema.org/a/CJvOblN803ISLO5dkh8Z4QSXP)
 
-[![asciicast](https://asciinema.org/a/1GKOZwcgGxEUo1e8cJoLMXtRH.svg)](https://asciinema.org/a/1GKOZwcgGxEUo1e8cJoLMXtRH)
+### Сравнение плоских файлов yaml. Вывод результата в формате stylish
 
-### Compare two files:
+[![asciicast](https://asciinema.org/a/mLLIyNtzbRNT15eO9bojV5tng.svg)](https://asciinema.org/a/mLLIyNtzbRNT15eO9bojV5tng)
 
-[![asciicast](https://asciinema.org/a/I6mmBlddbu8kWAvXZXH58Ookl.svg)](https://asciinema.org/a/I6mmBlddbu8kWAvXZXH58Ookl)
+### Рекурсивное сравнение Json и Yaml. Вывод результата в формате stylish
 
-### Use with nested structures  
+[![asciicast](https://asciinema.org/a/Qeke1CPw2NpBXYsrFWZcclsZf.svg)](https://asciinema.org/a/Qeke1CPw2NpBXYsrFWZcclsZf)
 
-[![asciicast](https://asciinema.org/a/3SoUNhl91ZI0TCZ2byrgBHaPO.svg)](https://asciinema.org/a/3SoUNhl91ZI0TCZ2byrgBHaPO)
+### Рекурсивное сравнение Json. Вывод результата в формате plain
 
-### It can return result in some formats:
-- 'stylish' - by default
-- 'plain'
-- 'json'
+[![asciicast](https://asciinema.org/a/GD1t8lWV31tJ5A1d9UMrToUul.svg)](https://asciinema.org/a/GD1t8lWV31tJ5A1d9UMrToUul)
 
-### Use with format 'plain'
+### Рекурсивное сравнение Json. Вывод результата в формате json
 
-[![asciicast](https://asciinema.org/a/Ju9cM4TmHHQo7POC5V4L3ZDVi.svg)](https://asciinema.org/a/Ju9cM4TmHHQo7POC5V4L3ZDVi)
-
-### Use with format 'json'
-
-[![asciicast](https://asciinema.org/a/CtY9xEmnbHmKfTVYGECzUROK8.svg)](https://asciinema.org/a/CtY9xEmnbHmKfTVYGECzUROK8)
+[![asciicast](https://asciinema.org/a/BZ8d7heHYOKybdWUskQ4ujj1E.svg)](https://asciinema.org/a/BZ8d7heHYOKybdWUskQ4ujj1E)
